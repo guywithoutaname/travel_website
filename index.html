@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover India — Travel &amp; Tourism | Beaches, Forts, Hills &amp; Culture</title>
+  <meta name="description" content="Discover India: explore Goa's beaches, Maharashtra's forts, Kerala's backwaters, Rajasthan's palaces and hill stations like Munnar and Mahabaleshwar.">
+  <meta name="author" content="Samarth Patil">
+  <!-- Favicon: a small SVG icon embedded directly -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231f3a2d'/%3E%3Cpath d='M12 44 L26 24 L34 34 L40 27 L52 44 Z' fill='%23c9a45c'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: elegant serif for headings, clean sans-serif for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- ===== CSS METHOD 3: EXTERNAL CSS =====
+       The main design system, layout, typography, responsive rules
+       and animations live in the separate file styles.css -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- ===== CSS METHOD 2: INTERNAL CSS =====
+       A short example written inside a <style> element in this document.
+       It styles only the highlighted "travel tip" note in the Travel Guide. -->
+  <style>
+    .internal-note {
+      border-left: 3px solid #c9a45c;
+      padding: 0.75rem 1.25rem;
+      background: rgba(201, 164, 92, 0.12);
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Skip link helps keyboard users jump straight to the content -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== HEADER & NAVIGATION ===================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a href="#home" class="logo">Discover<span>India</span></a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primaryNav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#experiences">Experiences</a></li>
+          <li><a href="#guide">Travel Guide</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-media" id="heroMedia">
+        <img src="images/hero.jpg" alt="Misty green ridges of the Western Ghats glowing under an orange sunrise" width="1920" height="1088">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <p class="eyebrow hero-anim" style="--d:0.2s">A journey through the subcontinent</p>
+        <h1 id="hero-title" class="hero-title">
+          <span class="hero-anim" style="--d:0.35s">Find Your Way to</span>
+          <em class="hero-anim" style="--d:0.55s">Incredible India</em>
+        </h1>
+        <p class="hero-text hero-anim" style="--d:0.8s">
+          From sun-warmed beaches and monsoon-washed forts to desert palaces and tea-covered hills —
+          discover a country of <strong>endless stories</strong>.
+        </p>
+        <a href="#destinations" class="btn btn-gold hero-anim" style="--d:1s">Explore Destinations <span aria-hidden="true">→</span></a>
+      </div>
+      <a href="#destinations" class="scroll-cue" aria-label="Scroll to destinations"><span></span></a>
+    </section>
+
+    <!-- ===================== POPULAR DESTINATIONS ===================== -->
+    <section class="section" id="destinations" aria-labelledby="dest-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Popular Destinations</p>
+          <h2 id="dest-title">Four states, four worlds</h2>
+          <p>Each region of India feels like a different country. Begin with these <mark>traveller favourites</mark>.</p>
+        </header>
+
+        <div class="card-grid">
+          <article class="dest-card reveal" id="goa">
+            <figure><img src="images/goa.jpg" alt="Fishing boats resting on a Goan beach beneath palm trees at sunset" loading="lazy" width="912" height="1104"></figure>
+            <div class="dest-body">
+              <small>West Coast</small>
+              <h3>Goa</h3>
+              <p>Golden beaches, Portuguese-era churches and slow sunsets with the sound of the Arabian Sea.</p>
+              <a href="#experiences" class="btn btn-line">Beach experiences</a>
+            </div>
+          </article>
+
+          <article class="dest-card reveal" id="maharashtra">
+            <figure><img src="images/maharashtra.jpg" alt="Stone ramparts of a Maratha hill fort on a green Sahyadri cliff" loading="lazy" width="912" height="1104"></figure>
+            <div class="dest-body">
+              <small>The Sahyadris</small>
+              <h3>Maharashtra</h3>
+              <p>Clifftop forts of Shivaji Maharaj, monsoon waterfalls and cool hill retreats near Pune and Mumbai.</p>
+              <a href="#heritage" class="btn btn-line">See the forts</a>
+            </div>
+          </article>
+
+          <article class="dest-card reveal" id="kerala">
+            <figure><img src="images/kerala.jpg" alt="A traditional houseboat gliding along palm-lined Kerala backwaters" loading="lazy" width="912" height="1104"></figure>
+            <div class="dest-body">
+              <small>God's Own Country</small>
+              <h3>Kerala</h3>
+              <p>Drift through backwaters on a houseboat, then climb into the tea gardens of the Western Ghats.</p>
+              <a href="#nature" class="btn btn-line">Hills &amp; nature</a>
+            </div>
+          </article>
+
+          <article class="dest-card reveal" id="rajasthan">
+            <figure><img src="images/rajasthan.jpg" alt="Amer Fort in Jaipur glowing in warm sunset light" loading="lazy" width="912" height="1104"></figure>
+            <div class="dest-body">
+              <small>Land of Kings</small>
+              <h3>Rajasthan</h3>
+              <p>Sandstone fortresses, painted havelis and desert evenings filled with folk music.</p>
+              <a href="#heritage" class="btn btn-line">Royal heritage</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HERITAGE & FORTS ===================== -->
+    <section class="section section-dark" id="heritage" aria-labelledby="heritage-title">
+      <div class="container split">
+        <div class="split-media reveal">
+          <img class="layer-back" src="images/rajasthan.jpg" alt="Amer Fort walls winding over the Aravalli hills" loading="lazy" width="912" height="1104">
+          <img class="layer-front" src="images/maharashtra.jpg" alt="Maratha fort bastion overlooking a monsoon valley" loading="lazy" width="912" height="1104">
+        </div>
+        <div class="split-text reveal">
+          <p class="eyebrow">Heritage &amp; Forts</p>
+          <h2 id="heritage-title">Walls that remember empires</h2>
+          <p>India's forts tell the story of kingdoms, sieges and craftsmanship spanning a thousand years.</p>
+          <ul class="feature-list">
+            <li><strong>Raigad &amp; Sinhagad, Maharashtra</strong> — the Maratha strongholds of Chhatrapati Shivaji Maharaj, reached by misty mountain trails.</li>
+            <li><strong>Pratapgad, Maharashtra</strong> — a <em>legendary</em> fort above the Konkan, a short drive from Mahabaleshwar.</li>
+            <li><strong>Amer Fort, Jaipur</strong> — honey-coloured sandstone and mirror-lined halls overlooking Maota Lake.</li>
+            <li><strong>Mehrangarh, Jodhpur</strong> — one of India's largest forts, rising over the blue city.</li>
+          </ul>
+          <p><small>Tip: visit forts early morning for cooler weather and softer light.</small></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HILL STATIONS & NATURE ===================== -->
+    <section class="section" id="nature" aria-labelledby="nature-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Hill Stations &amp; Nature</p>
+          <h2 id="nature-title">Where the air turns cool</h2>
+        </header>
+
+        <div class="hill-list">
+          <article class="hill reveal">
+            <figure><img src="images/mahabaleshwar.jpg" alt="Viewpoint path above the Krishna valley in Mahabaleshwar beside strawberry fields" loading="lazy" width="1200" height="800"></figure>
+            <div>
+              <h3>Mahabaleshwar</h3>
+              <p>Sweeping valley viewpoints, red-earth trails and fresh <em>strawberries</em> straight from the farm. Boat on Venna Lake and watch sunset at Arthur's Seat.</p>
+            </div>
+          </article>
+          <article class="hill reveal">
+            <figure><img src="images/hero.jpg" alt="Clouds drifting through the forested ridges of the Sahyadri near Lonavala" loading="lazy" width="1920" height="1088"></figure>
+            <div>
+              <h3>Lonavala</h3>
+              <p>Just two hours from Mumbai, Lonavala comes alive in the monsoon with waterfalls, cave temples at Karla and Bhaja, and its famous <strong>chikki</strong>.</p>
+            </div>
+          </article>
+          <article class="hill reveal">
+            <figure><img src="images/munnar.jpg" alt="Rolling tea plantations of Munnar covered in morning mist" loading="lazy" width="1200" height="800"></figure>
+            <div>
+              <h3>Munnar</h3>
+              <p>Endless emerald tea estates, the Nilgiri tahr of Eravikulam National Park and quiet mornings wrapped in mist.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCES ===================== -->
+    <section class="section section-sand" id="experiences" aria-labelledby="exp-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Experiences</p>
+          <h2 id="exp-title">Travel the way you love</h2>
+        </header>
+
+        <div class="exp-grid">
+          <article class="exp reveal"><img src="images/goa.jpg" alt="Palm-lined beach at golden hour" loading="lazy" width="912" height="1104"><div class="exp-label"><h3>Beaches</h3><p>Goa, Gokarna, Varkala</p></div></article>
+          <article class="exp reveal"><img src="images/hero.jpg" alt="Layered mountain ridges at sunrise" loading="lazy" width="1920" height="1088"><div class="exp-label"><h3>Mountains</h3><p>Sahyadris &amp; Himalayas</p></div></article>
+          <article class="exp reveal"><img src="images/kerala.jpg" alt="Houseboat on calm backwaters" loading="lazy" width="912" height="1104"><div class="exp-label"><h3>Culture</h3><p>Festivals, dance &amp; crafts</p></div></article>
+          <article class="exp reveal"><img src="images/rajasthan.jpg" alt="Palace walls of a Rajasthani fort" loading="lazy" width="912" height="1104"><div class="exp-label"><h3>Heritage</h3><p>Forts, temples &amp; palaces</p></div></article>
+          <article class="exp reveal"><img src="images/munnar.jpg" alt="Misty tea gardens" loading="lazy" width="1200" height="800"><div class="exp-label"><h3>Nature</h3><p>Forests, lakes &amp; wildlife</p></div></article>
+          <article class="exp reveal"><img src="images/cuisine.jpg" alt="Traditional Indian thali served on a banana leaf" loading="lazy" width="1200" height="800"><div class="exp-label"><h3>Local Cuisine</h3><p>Thalis, street food &amp; spice</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TRAVEL GUIDE ===================== -->
+    <section class="section" id="guide" aria-labelledby="guide-title">
+      <div class="container guide">
+        <div class="reveal">
+          <p class="eyebrow">Travel Guide</p>
+          <h2 id="guide-title">Good to know before you go</h2>
+          <ol class="tips">
+            <li><strong>Best season:</strong> October to March suits most regions; the monsoon (June–September) is magical in the Sahyadris and Kerala.</li>
+            <li><strong>Getting around:</strong> trains connect almost every city — book early on IRCTC for popular routes.</li>
+            <li><strong>Dress code:</strong> carry a scarf or covered clothing for temples, mosques and gurudwaras.</li>
+            <li><strong>Stay healthy:</strong> drink sealed or filtered water and enjoy street food where it is freshly cooked.</li>
+            <li><strong>Respect local customs:</strong> remove footwear where asked and always ask before photographing people.</li>
+          </ol>
+          <!-- Uses the INTERNAL CSS class defined in the <style> element in <head> -->
+          <p class="internal-note">Learning a few words — <em>namaste</em>, <em>dhanyavaad</em> — opens hearts everywhere you go.</p>
+        </div>
+
+        <aside class="responsible reveal" aria-labelledby="resp-title">
+          <h3 id="resp-title">Explore responsibly</h3>
+          <p>India's beauty depends on the travellers who visit it. Leave every fort, beach and trail <mark>cleaner than you found it</mark>.</p>
+          <ul>
+            <li>Carry a reusable bottle and bag</li>
+            <li>Stay on marked trails in hill stations</li>
+            <li>Support local guides, artisans and homestays</li>
+            <li>Never deface heritage walls</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section section-dark about" id="about" aria-labelledby="about-title">
+      <div class="container about-inner reveal">
+        <p class="eyebrow">About</p>
+        <h2 id="about-title">About Discover India</h2>
+        <!-- ===== CSS METHOD 1: INLINE CSS =====
+             The style attribute below is written directly on this single paragraph. -->
+        <p style="font-size: 1.15rem; max-width: 640px; margin-inline: auto;">
+          <em>Discover India</em> is a student travel project celebrating the landscapes, heritage and people of India.
+          It is built with <strong>HTML5, CSS3 and JavaScript</strong> to inspire your next journey.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a href="#home" class="logo">Discover<span>India</span></a>
+        <p><small>Beaches · Forts · Hills · Culture</small></p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#heritage">Heritage</a></li>
+          <li><a href="#nature">Hill Stations</a></li>
+          <li><a href="#experiences">Experiences</a></li>
+          <li><a href="#guide">Travel Guide</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="credit container"><small>Designed &amp; Developed by <strong>Samarth Patil</strong> · &copy; <span id="year">2026</span></small></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
